@@ -8,6 +8,9 @@ from urllib.parse import urlparse, urlencode, parse_qs
 from urllib.request import urlopen
 
 YT_COMMENT_URL = 'https://www.googleapis.com/youtube/v3/commentThreads'
+
+# These are YouTube urls of folklore lyric videos.
+# Change to whatever album/videos you want to.
 NAMES_TO_URL = {
     'the 1': 'https://www.youtube.com/watch?v=KsZ6tROaVOQ',
     'cardigan': 'https://www.youtube.com/watch?v=zLSUp53y-HQ', # Note: this is the lyric video, not music video

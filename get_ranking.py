@@ -6,27 +6,29 @@ import googleapiclient.discovery
 import googleapiclient.errors
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
+
+# These are IDs from the YouTube urls of evermore lyric videos.
+# Change to whatever album/videos you want to.
 NAMES_TO_ID = {
-    'the 1': 'KsZ6tROaVOQ',
-    'cardigan': 'zLSUp53y-HQ', # Note: this is the lyric video, not music video id
-    'the last great american dynasty': '2s5xdY6MCeI',
-    'exile': 'osdoLjUNFnA',
-    'my tears ricochet': 'OWbDJFtHl3w',
-    'mirrorball': 'KaM1bCuG4xo',
-    'seven': 'pEY-GPsru_E',
-    'august': 'nn_0zPAfyo8',
-    'this is me trying': '9bdLTPNrlEg',
-    'illicit affairs': 'MLV2SJKWk4M',
-    'invisible string': 'OuFnpmGwg5k',
-    'mad woman': '6DP4q_1EgQQ',
-    'epiphany': 'DUnDkI7l9LQ',
-    'betty': '6TAPqXkZW_I',
-    'peace': 'HpxX4ZE4KWE',
-    'hoax': 'ryLGxpjwAhM',
-    # 'cardigan (music video)': 'K-a8s8OLBSE'
+    'willow': '7EvwIw4gIyk', # Note: this is the lyric video, not music video id
+    'champagne problems': 'wMpqCRF7TKg',
+    'gold rush': 'Pz-f9mM3Ms8',
+    'tis the damn season': 'WuvhOD-mP8M',
+    'tolerate it': 'ukxEKY_7MOc',
+    'no body, no crime': 'IEPomqor2A8',
+    'happiness': 'tP4TTgt4nb0',
+    'dorothea': 'zI4DS5GmQWE',
+    'coney island': 'c_p_TBaHvos',
+    'ivy': '9nIOx-ezlzA',
+    'cowboy like me': 'YPlNBb6I8qU',
+    'long story short': 'rqQHa2HcGtM',
+    'marjorie': 'hP6QpMeSG6s',
+    'closure': 'AIFnKqIeEdY',
+    'evermore': 'EXLgZZE072g',
+    'willow (music video)': 'RsEZmictANA'
 }
 
-def main():
+def print_ranking():
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -89,4 +91,5 @@ def main():
         print(f"Raw values: {', '.join([str(x) for x in song_to_stats[name]])}\n")
 
 if __name__ == "__main__":
-    main()
+    print_ranking()
+    
